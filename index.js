@@ -663,7 +663,7 @@ app.get("/api/admin-logs", verifyToken, async (req, res) => {
       ...doc.data()
     }));
 
-    console.log(`Sending ${logs.length} logs to client for email ${email}`);
+    console.log(`Sending ${logs.length} logs to client for email ${userEmail}`);
     res.status(200).json({ success: true, logs });
   } catch (error) {
     console.error("Error fetching admin logs:", error);
